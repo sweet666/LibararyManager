@@ -1,0 +1,29 @@
+.formItem {
+ display: inline-block;
+ width: 150px;
+ padding-left: 10px;
+ white-space: nowrap;
+}
+
+input[type=submit], input[type=button] {
+ border: 1px;
+ border-color: #47A;
+ border-radius: 2px;
+ background-color: #369;
+ color: #fff;
+}
+sup {
+ color: red;
+}
+
+form {
+  border: solid 1px grey;
+  background-color: #EFEFEF;
+  padding: 5px;
+  margin: 20px;
+}
+
+.error {
+ color: red;
+ padding-left: 10px;
+}

@@ -1,0 +1,60 @@
+.b1 {color: #4885ed}
+.b2 {color: #3cba54}
+.b3 {color: #db3236}
+.b4 {color: #3cba54}
+.b5 {color: #f4c20d}
+.b6 {color: #f4c20d}
+.b7 {color: #db3236}
+.b8 {color: #4885ed}
+.b9 {color: #db3236}
+.b10 {color: #4885ed}
+
+
+h1.title {
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+
+  text-align:center;
+  margin: auto;
+}
+
+.searchForm {
+  margin: 10px auto;
+}
+
+input[type=submit], input[type=button] {
+ border: 1px;
+ border-color: #47A;
+ border-radius: 2px;
+ background-color: #369;
+ color: #fff;
+}
+
+.datatable {
+  border-left: solid 1px #000;
+  border-top: solid 1px #000;
+  width: 100%;
+}
+
+.datatable td {
+  border-bottom: solid 1px #000;
+  border-right: solid 1px #000;
+  padding: 3px;
+}
+
+.datatable_even {
+  background-color: #EFEFEF;
+}
+
+.datatable_header td {
+  background-color: #CECECE;
+  padding: 5px 3px !important;
+}
+
+.serialNumber {
+  width:50px;
+  white-space: nowrap;
+}

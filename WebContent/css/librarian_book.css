@@ -1,0 +1,51 @@
+.formItem {
+ display: inline-block;
+ width: 100px;
+ padding-left: 10px;
+ white-space: nowrap;
+}
+
+input[type=submit], input[type=button] {
+ border: 1px;
+ border-color: #47A;
+ border-radius: 2px;
+ background-color: #369;
+ color: #fff;
+}
+
+sup {
+ color: red;
+}
+
+.datatable {
+  border-left: solid 1px #000;
+  border-top: solid 1px #000;
+  width: 100%;
+}
+
+.datatable td {
+  border-bottom: solid 1px #000;
+  border-right: solid 1px #000;
+  padding: 3px;
+}
+
+.datatable_even {
+  background-color: #EFEFEF;
+}
+
+.datatable_header td {
+  background-color: #CECECE;
+  padding: 5px 3px !important;
+}
+
+.isbn {
+  width:30px;
+  white-space: nowrap;
+}
+
+.bookContainer {
+  padding: 5px 40px 50px 40px;
+  max-height:500px;
+  overflow-y:auto;
+  border-right:dashed 1px grey;
+}

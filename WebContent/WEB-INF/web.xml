@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:web="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>Web-приложение: Библиотека</display-name>
+<welcome-file-list>
+    <welcome-file>/index.jsp</welcome-file>
+  </welcome-file-list>
+    <!-- Front controller with command. -->
+    <servlet>
+        <display-name>Controller</display-name>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>by.pvt.safronenko.library.tools.controllers.Controller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+
+    <!-- This must be the 1-st filter to use UTF-8. -->
+    <filter>
+        <filter-name>RequestEncodingFilter</filter-name>
+        <filter-class>by.pvt.safronenko.library.tools.filters.RequestEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RequestEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Auth filter for security. -->
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>by.pvt.safronenko.library.tools.filters.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Common filter. -->
+    <filter>
+        <filter-name>WildcardFilter</filter-name>
+        <filter-class>by.pvt.safronenko.library.tools.filters.WildcardFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>WildcardFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <listener>
+        <listener-class>by.pvt.safronenko.library.tools.listeners.ApplicationListener</listener-class>
+    </listener>
+
+    <!-- Parameters. -->
+    <context-param>
+        <param-name>jdbcDriver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcUrl</param-name>
+        <param-value>jdbc:mysql://localhost/library?characterEncoding=utf8&amp;useUnicode=true&amp;useSSL=false
+        </param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcUser</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value>sweet666</param-value>
+    </context-param>
+</web-app>
